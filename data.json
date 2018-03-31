@@ -1,0 +1,24 @@
+{
+    "data": {
+        "videos": [
+            {
+                "url": "http://techslides.com/demos/sample-videos/small.mp4",
+                "title": "The Bouncer",
+                "tagline": "These bouncers are getting a bit over the top...",
+                "length": 390
+            },
+            {
+                "url": "http://techslides.com/demos/sample-videos/small.mp4",
+                "title": "The Intervention",
+                "tagline": "These bouncers are getting a bit over the top...",
+                "length": 390
+            },
+            {
+                "url": "http://techslides.com/demos/sample-videos/small.mp4",
+                "title": "When Your Mates Are Cunts",
+                "tagline": "These bouncers are getting a bit over the top...",
+                "length": 390
+            }
+        ]
+    }
+}
