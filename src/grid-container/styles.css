@@ -1,0 +1,35 @@
+.cms-table-row {
+    border: 2px solid black;
+}
+
+.cms-table-heading-row {
+    background-color: orange;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    border: 4px solid black;
+}
+
+.table {
+    border: 2px solid black;
+}
+
+.edit-box-container {
+    display: inline-flex;
+    background-color: darkred;
+    color: white;
+    padding-top: 5vh;
+    border: 5px solid grey;
+}
+
+.edit-box-row {
+    display: flex;
+    list-style-type: none;
+}
+
+.edit-box-row-item {
+    display: inline-flex;
+}
+
+#content-no {
+    margin-right: 10vw;
+}

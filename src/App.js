@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import GridContainer from './grid-container/grid-container';
+
 import logo from './logo.svg';
+import eggtimer from './eggtimer.png';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
 
@@ -8,7 +12,7 @@ class App extends Component {
     super()
     this.state = {
       isLoaded: false,
-      data: null
+      videos: null
     }
   }
 
@@ -17,21 +21,19 @@ class App extends Component {
   }
 
   getDB() {
-    fetch('http://localhost:3004/data/')
+    fetch('http://localhost:3004/videos/')
       .then(res => res.json())
       .then(json => {
         this.setState({
-          data: json,
+          videos: json,
           isLoaded: true
         })
       })
-
-    console.log('FUBAR: ', this.state);
   }
 
   render() {
 
-    const { isLoaded } = this.state;
+    const { isLoaded, videos } = this.state;
 
     return (
       <div className="App">
@@ -40,13 +42,12 @@ class App extends Component {
           <h1 className="App-title">STC CMS Editor</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Welcome to the editor for the new STC site.
+          Click <code>edit</code> to begin.
         </p>
-
         
-        { isLoaded ? <h2>loaded!</h2> : <h4>loading...</h4>}
+        { isLoaded ? <GridContainer videos={videos} /> : <img alt="" src={eggtimer} width={60} height={60} /> }
 
-        <button className="btn btn-warning">click me</button>
       </div>
     );
   }

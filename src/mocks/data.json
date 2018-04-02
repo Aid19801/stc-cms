@@ -1,0 +1,32 @@
+{
+  "videos": [
+    {
+      "id": 0,
+      "url": "www.pooPOO.net",
+      "title": "Poo2",
+      "tagline": "poo is a poo",
+      "length": "109"
+    },
+    {
+      "id": 1,
+      "url": "http://techslides.com/demos/sample-videos/thingfubar835.mp4",
+      "title": "WEEBLES",
+      "tagline": "These bouncers are getting a bit over the top...",
+      "length": 390
+    },
+    {
+      "id": 2,
+      "url": "http://techslides.com/demos/sample-videos/thingfubar835.mp4",
+      "title": "The shit",
+      "tagline": "These bouncers are getting a bit over the top...",
+      "length": 390
+    },
+    {
+      "id": 3,
+      "url": "https://www.poobar.com",
+      "title": "fuck",
+      "tagline": "kasjdfsD",
+      "length": "SDGLKNsdov osdv ojsd ovj  sdoinionds iodinv"
+    }
+  ]
+}
