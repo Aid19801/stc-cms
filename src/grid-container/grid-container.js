@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import EditBox from './edit-box';
+import AddNewItem from './add-new-item';
 
 import styles from './styles.css';
 
@@ -17,6 +18,8 @@ class GridContainer extends Component {
                 url: '',
             },
             showEditSection: false,
+            showAddSection: false,
+            numOfVids: this.props.videos.length,
         }
     }
 
@@ -33,12 +36,19 @@ class GridContainer extends Component {
         })
     }
 
+    addItem() {
+        this.setState({
+            showAddSection: !this.state.showAddSection
+        })
+    }
+
     render() {
-        const { showEditSection, obj } = this.state;
+        const { showEditSection, showAddSection, obj } = this.state;
         const { videos } = this.props;
 
         return (
             <div>
+                {showAddSection ? <AddNewItem num={this.state.numOfVids} /> : null}
                 { showEditSection ? <EditBox contentToChange={obj} /> : null}
                 <table className="table">
                     <thead className="cms-table-row">
@@ -61,25 +71,18 @@ class GridContainer extends Component {
                                 <td>{eachContentsObject.tagline}</td>
                                 <td>{eachContentsObject.length}</td>
                                 <td>{eachContentsObject.url}</td>
-                                <td><button onClick={() => this.saveSpecificContentObjToState(eachContentsObject)}>Edit/Cancel Edit</button></td>
+                                <td><Button onClick={() => this.saveSpecificContentObjToState(eachContentsObject)}>Edit/Cancel Edit</Button></td>
                             </tr>
                         }
-                        ) // button sends THAT row's object to state
+                        )
                         }
                     </tbody>
                 </table>
+                <Button onClick={() => this.addItem()}>Add New Item</Button>
+                <Button onClick={() => this.addItem()}>Add New Item</Button>
             </div>
         )
     }
 };
 
 export default GridContainer;
-
-// 1) map through data and render 1 row per json object
-// 2) when u click on edit button it saves that rows object
-// to state
-// 3) we pass that state/obj through to EditBox via props
-// 4) EditBox renders that obj and adjacent input for each
-// 5) when you click submit in edit box, it fires off
-// PATCH req to json-server
-// 6) grid container re-renders

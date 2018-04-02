@@ -33,3 +33,8 @@
 #content-no {
     margin-right: 10vw;
 }
+
+.add-new-ul {
+    list-style-type: none;
+    display: flex;
+}
