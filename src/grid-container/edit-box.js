@@ -77,7 +77,7 @@ class EditBox extends Component {
                     <li className="edit-box-row-item">Length (seconds): <input placeholder={length} onChange={(e) => this.newLengthToState(e)} /></li>
                     <li className="edit-box-row-item">Url: <input placeholder={url} onChange={(e) => this.newUrlToState(e)} /></li>
 
-                    <li className="edit-box-row-item"><button onClick={() => this.submitChange()}>Submit Change</button></li>
+                    <li className="edit-box-row-item"><button className="btn" onClick={() => this.submitChange()}>Submit Change</button></li>
                 </ul>
             </div>
         )
